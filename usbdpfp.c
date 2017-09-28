@@ -115,7 +115,7 @@
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,37)
 #include <linux/semaphore.h>
 #endif
-#include <asm/uaccess.h>        
+#include <linux/uaccess.h>        
 
 #include "usbdpfp.h"
 
