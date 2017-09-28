@@ -15,11 +15,18 @@
 #include <linux/slab.h>
 #include <linux/kref.h>
 #include <linux/usb.h>
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4,12,0)
 #include <linux/uaccess.h>
+#else
+#include <asm/uaccess.h>
+#endif
 #include <linux/list.h>
 #include <linux/wait.h>
 #include <linux/cdev.h>
 #include <linux/mempool.h>
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4,11,0)
+#include <linux/sched/signal.h>
+#endif
 
 
 #include "usbdpfpi.h"
